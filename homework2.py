@@ -2,7 +2,7 @@ def custom_write(file_name: str, strings: list):
         strings_positions = {}
         line_number = 1
         with open(file_name, 'w', encoding='utf-8') as file:
-        for string in strings:
+            for string in strings:
                 line_byte = file.tell()
                 file.write(f'{string}\n')
                 strings_positions[(line_number, line_byte)] = string
